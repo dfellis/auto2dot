@@ -1,0 +1,30 @@
+{
+  "name": "auto2dot",
+  "version": "0.0.0",
+  "description": "Parse async.auto out of a JS file and generate GraphViz .dot files",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodeunit tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dfellis/auto2dot"
+  },
+  "keywords": [
+    "async",
+    "auto",
+    "graphviz",
+    "dot",
+    "ast"
+  ],
+  "author": "David Ellis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dfellis/auto2dot/issues"
+  },
+  "homepage": "https://github.com/dfellis/auto2dot",
+  "dependencies": {
+    "esprima": "^1.2.2",
+    "commander": "^2.2.0"
+  }
+}
