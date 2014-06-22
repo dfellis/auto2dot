@@ -4,11 +4,18 @@ Parse async.auto out of a JS file and generate GraphViz .dot files
 
 ## Install
 
-Coming soon!
+    npm install auto2dot
 
 ## Usage
 
-Coming soon!
+      Usage: auto2dot [options]
+
+        Options:
+
+            -h, --help                output usage information
+            -V, --version             output the version number
+            -s, --source <file>       The Javascript source file to parse
+            -d, --destination <file>  The GraphViz dot file to write
 
 ## License (MIT)
 
