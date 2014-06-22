@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var commander = require('commander');
 var esprima = require('esprima');
 var fs = require('fs');
