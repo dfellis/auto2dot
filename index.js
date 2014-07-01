@@ -129,6 +129,7 @@ if (module === require.main) {
         loadFile: loadFile,
         saveFile: saveFile,
         getAst: getAst,
+        getAsyncIdentifier: getAsyncIdentifier,
         findAutoSubtree: findAutoSubtree,
         buildGraphVizDotString: buildGraphVizDotString
     };

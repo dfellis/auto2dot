@@ -1,0 +1,10 @@
+digraph asyncAuto {
+	foo -> baz;
+	bar -> baz;
+	baz -> bay;
+	bay -> abc;
+	bay -> xyz;
+	abc -> def;
+	def -> ijk;
+	xyz -> ijk;
+}
