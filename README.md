@@ -1,6 +1,42 @@
+[![NPM version](https://badge.fury.io/js/auto2dot.svg)](http://badge.fury.io/js/auto2dot) [![Build Status](https://travis-ci.org/dfellis/auto2dot.svg?branch=master)](https://travis-ci.org/dfellis/auto2dot) [![Coverage Status](https://coveralls.io/repos/dfellis/auto2dot/badge.png?branch=add-tests-and-coverage)](https://coveralls.io/r/dfellis/auto2dot?branch=add-tests-and-coverage) [![Dependency Status](https://gemnasium.com/dfellis/auto2dot.svg)](https://gemnasium.com/dfellis/auto2dot)
+
 # auto2dot
 
 Parse async.auto out of a JS file and generate GraphViz .dot files
+
+Convert this:
+
+```js
+var async = require('async');
+
+async.auto({
+    foo: function() {},
+    bar: function() {},
+    baz: ['foo', 'bar', function() {}],
+    bay: ['baz', function() {}],
+    abc: ['bay', function() {}],
+    xyz: ['bay', function() {}],
+    def: ['abc', function() {}],
+    ijk: ['def', 'xyz', function() {}]
+});
+```
+
+Into this:
+
+```dot
+digraph asyncAuto {
+	foo -> baz;
+	bar -> baz;
+	baz -> bay;
+	bay -> abc;
+	bay -> xyz;
+	abc -> def;
+	def -> ijk;
+	xyz -> ijk;
+}
+```
+
+![Graph Visualization](https://raw.githubusercontent.com/dfellis/auto2dot/master/tests/examples/basic.png)
 
 ## Install
 
