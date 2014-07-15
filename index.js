@@ -69,6 +69,12 @@ function findAutoSubtree(ast, asyncIdentifier) {
             if (result) break;
         }
         return result;
+    } else if (ast.type === 'FunctionExpression') {
+        for (var l = 0; l < ast.body.body.length; l++) {
+            result = findAutoSubtree(ast.body.body[l], asyncIdentifier);
+            if (result) break;
+        }
+        return result;
     } else if (ast.type === 'ExpressionStatement') {
         return findAutoSubtree(ast.expression, asyncIdentifier);
     } else if (ast.type === 'CallExpression') {
@@ -77,6 +83,17 @@ function findAutoSubtree(ast, asyncIdentifier) {
             ast.callee.property.name === 'auto') {
             return ast.arguments[0];
         }
+        return undefined;
+    } else if (ast.type === 'AssignmentExpression') {
+        return findAutoSubtree(ast.right, asyncIdentifier);
+    } else if (ast.type === 'BinaryExpression') {
+        result = findAutoSubtree(ast.left, asyncIdentifier);
+        if (result) return result;
+        result = findAutoSubtree(ast.right, asyncIdentifier);
+        return result;
+    } else if (ast.type === 'ReturnStatement') {
+        return findAutoSubtree(ast.argument, asyncIdentifier);
+    } else if (ast.type === 'Literal') {
         return undefined;
     } else {
         // TODO: Handle the rest of the tree
