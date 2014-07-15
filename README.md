@@ -1,4 +1,4 @@
-[![NPM version](https://badge.fury.io/js/auto2dot.svg)](http://badge.fury.io/js/auto2dot) [![Build Status](https://travis-ci.org/dfellis/auto2dot.svg?branch=master)](https://travis-ci.org/dfellis/auto2dot) [![Coverage Status](https://coveralls.io/repos/dfellis/auto2dot/badge.png?branch=add-tests-and-coverage)](https://coveralls.io/r/dfellis/auto2dot?branch=add-tests-and-coverage) [![Dependency Status](https://gemnasium.com/dfellis/auto2dot.svg)](https://gemnasium.com/dfellis/auto2dot)
+[![NPM version](https://badge.fury.io/js/auto2dot.svg)](http://badge.fury.io/js/auto2dot) [![Build Status](https://travis-ci.org/dfellis/auto2dot.svg?branch=master)](https://travis-ci.org/dfellis/auto2dot) [![Coverage Status](https://coveralls.io/repos/dfellis/auto2dot/badge.png?branch=master)](https://coveralls.io/r/dfellis/auto2dot?branch=master) [![Dependency Status](https://gemnasium.com/dfellis/auto2dot.svg)](https://gemnasium.com/dfellis/auto2dot)
 
 # auto2dot
 
