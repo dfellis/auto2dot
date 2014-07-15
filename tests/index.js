@@ -51,3 +51,43 @@ exports.buildGraphVizDotString = function(test) {
     test.equal(typeof dotString, 'string');
     test.done();
 };
+
+exports.fullStack = function(test) {
+    test.expect(1);
+    var result = fs.readFileSync('./tests/examples/basic.dot', 'utf8');
+    test.equal(
+        result,
+        async2dot.buildGraphVizDotString(
+            async2dot.findAutoSubtree(
+                async2dot.getAst(
+                    async2dot.loadFile(
+                        './tests/examples/basic.js'
+    )))));
+    test.done();
+};
+
+exports.checkPathThatIgnoresNonAsyncRequires = function(test) {
+    test.expect(1);
+    test.equal(
+        'ObjectExpression',
+        async2dot.findAutoSubtree(
+            async2dot.getAst(
+                async2dot.loadFile(
+                    './tests/examples/multirequire.js'
+        ))).type
+    );
+    test.done();
+};
+
+exports.throwsWhenAutoIsDynamic = function(test) {
+    test.expect(1);
+    test.throws(function() {
+        async2dot.buildGraphVizDotString(
+            async2dot.findAutoSubtree(
+                async2dot.getAst(
+                    async2dot.loadFile(
+                        './tests/examples/dynamicauto.js'
+        ))));
+    });
+    test.done();
+};
