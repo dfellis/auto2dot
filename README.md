@@ -1,7 +1,6 @@
 [![NPM version](https://badge.fury.io/js/auto2dot.svg)](http://badge.fury.io/js/auto2dot)
 [![Build Status](https://travis-ci.org/duereg/auto2dot.svg?branch=master)](https://travis-ci.org/duereg/auto2dot)
 [![Coverage Status](https://coveralls.io/repos/duereg/auto2dot/badge.png?branch=master)](https://coveralls.io/r/duereg/auto2dot?branch=master)
-[![Dependency Status](https://gemnasium.com/duereg/auto2dot.svg)](https://gemnasium.com/duereg/auto2dot)
 
 # auto2dot
 
