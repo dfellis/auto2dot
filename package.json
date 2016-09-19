@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:dfellis/auto2dot"
+    "url": "git@github.com:duereg/auto2dot"
   },
   "keywords": [
     "async",
@@ -25,17 +25,21 @@
   "author": "David Ellis",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dfellis/auto2dot/issues"
+    "url": "https://github.com/duereg/auto2dot/issues"
   },
-  "homepage": "https://github.com/dfellis/auto2dot",
+  "homepage": "https://github.com/duereg/auto2dot",
   "dependencies": {
     "commander": "^2.2.0",
     "esprima": "^3.0.0"
   },
   "devDependencies": {
     "coveralls": "^2.10.1",
+    "eslint": "^3.5.0",
     "istanbul": "^0.4.5",
-    "jshint": "^2.5.1",
     "nodeunit": "^0.10.2"
+  },
+  "engines": {
+    "node": "^4.2.3",
+    "npm": "^3.5.2"
   }
 }
