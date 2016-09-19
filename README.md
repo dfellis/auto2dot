@@ -1,4 +1,7 @@
-[![NPM version](https://badge.fury.io/js/auto2dot.svg)](http://badge.fury.io/js/auto2dot) [![Build Status](https://travis-ci.org/dfellis/auto2dot.svg?branch=master)](https://travis-ci.org/dfellis/auto2dot) [![Coverage Status](https://coveralls.io/repos/dfellis/auto2dot/badge.png?branch=master)](https://coveralls.io/r/dfellis/auto2dot?branch=master) [![Dependency Status](https://gemnasium.com/dfellis/auto2dot.svg)](https://gemnasium.com/dfellis/auto2dot)
+[![NPM version](https://badge.fury.io/js/auto2dot.svg)](http://badge.fury.io/js/auto2dot)
+[![Build Status](https://travis-ci.org/duereg/auto2dot.svg?branch=master)](https://travis-ci.org/duereg/auto2dot)
+[![Coverage Status](https://coveralls.io/repos/duereg/auto2dot/badge.png?branch=master)](https://coveralls.io/r/duereg/auto2dot?branch=master)
+[![Dependency Status](https://gemnasium.com/duereg/auto2dot.svg)](https://gemnasium.com/duereg/auto2dot)
 
 # auto2dot
 
@@ -36,7 +39,7 @@ digraph asyncAuto {
 }
 ```
 
-![Graph Visualization](https://raw.githubusercontent.com/dfellis/auto2dot/master/tests/examples/basic.png)
+![Graph Visualization](https://raw.githubusercontent.com/duereg/auto2dot/master/tests/examples/basic.png)
 
 ## Install
 
@@ -55,7 +58,7 @@ digraph asyncAuto {
 
 ## License (MIT)
 
-Copyright (C) 2014 by David Ellis
+Copyright (C) 2016 by David Ellis
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
