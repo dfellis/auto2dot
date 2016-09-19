@@ -1,19 +1,19 @@
 {
   "name": "auto2dot",
-  "version": "0.2.0",
+  "version": "0.2.4",
   "description": "Parse async.auto out of a JS file and generate GraphViz .dot files",
   "main": "index.js",
   "bin": "index.js",
   "scripts": {
-    "test": "npm run jshint && istanbul --print=none cover nodeunit tests && istanbul report text",
-    "jshint": "jshint --verbose .",
+    "test": "npm run eslint && istanbul --print=none cover nodeunit tests && istanbul report text",
+    "eslint": "eslint index.js tests/index.js",
     "cover": "istanbul cover --report none --print detail test/index.js",
     "view-cover": "istanbul report html && open ./coverage/index.html",
     "coveralls": "cat coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:dfellis/auto2dot"
+    "url": "git@github.com:duereg/auto2dot"
   },
   "keywords": [
     "async",
@@ -25,17 +25,23 @@
   "author": "David Ellis",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dfellis/auto2dot/issues"
+    "url": "https://github.com/duereg/auto2dot/issues"
   },
-  "homepage": "https://github.com/dfellis/auto2dot",
+  "homepage": "https://github.com/duereg/auto2dot",
   "dependencies": {
-    "esprima": "^1.2.2",
-    "commander": "^2.2.0"
+    "commander": "^2.2.0",
+    "esprima": "^3.0.0"
   },
   "devDependencies": {
-    "nodeunit": "^0.9.0",
-    "istanbul": "^0.2.13",
-    "jshint": "^2.5.1",
-    "coveralls": "^2.10.1"
+    "coveralls": "^2.10.1",
+    "eslint": "^3.5.0",
+    "eslint-config-opentable-es5": "^0.5.0",
+    "eslint-plugin-mocha": "^4.5.1",
+    "istanbul": "^0.4.5",
+    "nodeunit": "^0.10.2"
+  },
+  "engines": {
+    "node": "^4.2.3",
+    "npm": "^3.5.2"
   }
 }

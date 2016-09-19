@@ -1,0 +1,6 @@
+{
+  "extends": "eslint-config-opentable-es5",
+  "rules": {
+    "strict": 0
+  }
+}
