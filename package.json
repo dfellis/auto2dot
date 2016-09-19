@@ -1,6 +1,6 @@
 {
   "name": "auto2dot",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Parse async.auto out of a JS file and generate GraphViz .dot files",
   "main": "index.js",
   "bin": "index.js",
