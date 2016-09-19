@@ -1,3 +1,5 @@
+'use strict';
+
 const async2dot = require('..');
 const fs = require('fs');
 
@@ -62,6 +64,19 @@ exports.fullStack = function(test) {
                 async2dot.getAst(
                     async2dot.loadFile(
                         './tests/examples/basic.js'
+    )))));
+  test.done();
+};
+
+exports.transpiledOutput = function(test) {
+  test.expect(1);
+  test.equal(
+        true,
+        !!async2dot.buildGraphVizDotString(
+            async2dot.findAutoSubtree(
+                async2dot.getAst(
+                    async2dot.loadFile(
+                        './tests/examples/transpiledoutput.js'
     )))));
   test.done();
 };

@@ -5,8 +5,8 @@ function blah() {
   return foo.blah() * 2;
 }
 
-module.exports = function baz(abc, callback) {
-  async.auto({
+module.exports = function transpiledOutput(abc, callback) {
+  (0, async.auto)({
     a: foo.a,
     b: foo.b,
     c: ['a', 'b', foo.c],

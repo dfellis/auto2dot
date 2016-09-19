@@ -1,8 +1,10 @@
 #!/usr/bin/env node
+'use strict';
+
 const commander = require('commander');
 const esprima = require('esprima');
 const fs = require('fs');
-const package = require('./package.json');
+const pkg = require('./package.json');
 
 function loadFile(filename) {
   return fs.readFileSync(filename, 'utf8');
@@ -35,7 +37,8 @@ function getAsyncIdentifier(ast) {
       if (ast.init.callee.type === 'Identifier' &&
                 ast.init.callee.name === 'require' &&
                 ast.init.arguments[0].type === 'Literal' &&
-                ast.init.arguments[0].value === 'lib/utils') {
+                (ast.init.arguments[0].value === 'lib/utils' ||
+                 ast.init.arguments[0].value === 'async')) {
         return ast.id.name;
       }
     }
@@ -132,10 +135,10 @@ function buildGraphVizDotString(subAst) {
 
 function main() {
   commander
-        .version(package.version)
-        .option('-s, --source <file>', 'The Javascript source file to parse', String)
-        .option('-d, --destination <file>', 'The GraphViz dot file to write', String)
-        .parse(process.argv);
+    .version(pkg.version)
+    .option('-s, --source <file>', 'The Javascript source file to parse', String)
+    .option('-d, --destination <file>', 'The GraphViz dot file to write', String)
+    .parse(process.argv);
 
   if (!commander.source || !commander.destination) return commander.help();
 
